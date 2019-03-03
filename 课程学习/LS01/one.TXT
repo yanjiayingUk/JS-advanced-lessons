@@ -1,0 +1,21 @@
+网络地址输入about:blank
+在console里边可以输入代码
+换行shift+enter
+直接执行enter
+ctrl+l清空之前的内容
+ctrl+r刷新
+Ctrl+滚轮   当前位置进行放大
+console.error(1);可以输出错误的信息
+
+代码调试点击sourses,左侧找到调试代码文件，找到对应JS代码
+点击行数前可以添加断点
+       右侧第一个按钮停到下一个断点，继续执行
+                 二个跳过执行
+                 五个逐行添加断点
+                 三个跳出函数
+                 四个跳入下一个函数
+       右侧Call Stack可以判断函数执行的占，即哪些函数正在执行
+              Scope可以查看当前作用域的变量
+
+ECMAScript是JavaScript标准
+JS和C,C++相比运行效率低一些，开发效率高一些
