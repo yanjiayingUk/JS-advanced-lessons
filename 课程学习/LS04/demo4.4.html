@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>阴2</title>
+</head>
+<body>
+</body>
+<script>
+    //switch case是进行的值和类型的判断，不会发生隐式的类型转换
+    var index=1;
+    switch(index){
+        case 1:
+        console.log("星期一");
+        break;
+        case 2:
+        console.log("星期2");
+        break;
+        default:console.log("均不符合");
+    }
+
+    var obj1={"username":"zhangsan","age":20};
+    obj1.__proto__.sex="male";
+    for(var i in obj1){
+        console.log(i,obj1[i]);
+    }
+
+</script>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+

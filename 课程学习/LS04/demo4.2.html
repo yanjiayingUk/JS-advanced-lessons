@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>this判断当前页面是否是严格模式</title>
+</head>
+<body>
+</body>
+<script>
+    'use strict'
+    function fn1(){
+        var result=(this===undefined?true:false);
+        return result;
+    }
+    console.log(fn1());
+</script>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+

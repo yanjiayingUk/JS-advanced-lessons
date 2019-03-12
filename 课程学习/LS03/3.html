@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JS语句块</title>
+</head>
+<body>
+</body>
+<script>
+	var num1=21;
+	var num2=num1;
+	num1=10;
+	console.log(num2);
+
+
+	//引用类型
+	var object1={"username":"zhangsan"};//实际对象值在堆区，通过引用指向堆区里边的对象
+	var object2=object1;
+	object2.username="lili";
+	console.log(object1);
+
+
+	var arr1=[1,3,2,4];
+	var arr2=arr1;
+	//arr2[0]=8;
+	arr2=[1,2,3,4]
+	console.log(arr1);
+
+
+	var object3={};
+	var object4={};
+	console.log(object3==object4);//存储的引用不同，判断的是引用
+
+
+	//infinity与-infinity
+	//
+	//
+	var str="abcdef";
+	console.log(str.slice(0,-1));
+
+	var str1="ab_cd_ef";
+	str.slice(0,2);
+	console.log(str.split("_"));
+	//substr(截取起始位置，截取的长度)
+	str.substr(0,3);
+
+
+	//var stra=new String("abcdef");
+	var strb="abcdef";
+	strb.substr(0,2);
+	//装箱操作
+	var strb="abcdef";
+	var strObject=new String(strb);
+	strObject.substr(0,2);
+
+	window.strb;
+	window.parseInt();
+</script>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    var a=45;
+    if(54==a){
+        console.log("判等")
+    }
+    //===先判断类型。再判断值
+
+    var x="1";
+    console.log(++x);//先进行运算，然后输出
+    console.log(x++);//先输出，然后进行运算
+    console.log(x+=1);//字符串的拼接
+
+    console.log(3==new String(3));//true
+    console.log(3===new String(3));//false
+
+    //左为真，返回右操作数，左为假，返回false
+    console.log(20&&0);
+    console.log(null && 4);
+    console.log({} && "world");//空对象与上"world"，结果为真
+
+    var score=76;
+    if(score>90){
+        console.log("优");
+    }
+    else if(score>75){
+        console.log("良");
+    }
+    else if(score>60){
+        console.log("及格");
+    }
+    else{
+        console.log("不及格");
+    }
+    console.log((score>90&&"优")||(score>75&&"良")||(score>60&&"及格")||("不及格"));
+
+    switch(true){//注。要保证这的值和case里的值和类型都相等
+        case score>90:console.log("优");
+        break;
+        case score>75:console.log("良");
+        break;
+        case score>60:console.log("及格");
+        break;
+        default:console.log("不及格");
+    }
+</script>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>（烬）</title>
+</head>
+<body>
+</body>
+<script>
+    //定义函数的形参和调用函数订单实参个数可以不一致
+    function sum(x,y,z){
+        x=x;
+        y=y;
+        z=z;
+        return x+y+z;
+    }
+    console.log(sum());
+
+    function sum1(x,y,z){
+        x=1;
+        y=2;
+        z=3;
+        return x+y+z;
+    }
+    console.log(sum1(false,5,6));
+
+    function sum2(x,y=2,z=3){
+        return x+y+z;
+    }
+    console.log(sum2(1));
+</script>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+

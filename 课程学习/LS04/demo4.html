@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>progress</title>
+</head>
+<body>
+</body>
+<script>
+    //JS里边最大缺点，就是里边的全局变量
+    //如果变量不使用var声明，会自动提升为全局变量
+    function fu2(){
+        username="zhangsan";
+    }
+    fu1();
+    //console.log(username);//使用严格模式报错
+    //对当前页面的所有JavaScript都使用严格模式
+    //'use strict'
+    //对函数内部代码使用严格模式
+    function fu1(){
+        'use strict'
+    }
+    //ES ECMAScript简写  语言标准
+    //ES5 ES6这是ECMASript最主流的两个版本
+    if(true){
+        var a=1;
+    }
+    a=2;
+    console.log(a);//ES5中没有块级作用域
+
+    for(var i=0;i<3;i++){
+
+    }
+    console.log(i);
+
+    function fu3(){
+        'use strict'
+        //普通函数的内部this指向window对象
+        console.log(this);
+    }
+    fu3();
+</script>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+
