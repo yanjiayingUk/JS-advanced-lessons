@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    //对象 instanceof 构造函数
+    //1.判断这个对象能否使用后面的构造函数实例化得到
+    function Person(username,age){
+        this.username=username;
+        this.age=age;
+    }
+    var person=new Person("zhangsan",20);
+    person instanceof Person;
+
+    //2.判断能否在对象的原型链上找到构造函数的prototype
+    console.log(person);
+    console.log(person.__proto__==Person.prototype);
+    //判断能否在person的原型链上找到Object构造函数的prototype
+    console.log(person instanceof Object);
+    console.log(person.__proto__==Object.prototype);//false
+    console.log(person.__proto__.__proto__==Object.prototype);true
+
+
+    //只要是一个对象instanceof Object 都是true
+    console.log(Function instanceof Function);
+    console.log(Function instanceof Object);
+
+    console.log(Array instanceof Function);
+    console.log(Array instanceof Object);
+
+    console.log(Date instanceof Function);//true
+    console.log(Date instanceof Object);
+
+    //Math和JSON不是函数
+    console.log(Math instanceof Function);//false
+    console.log(Math instanceof Object);
+
+    console.log(JSON instanceof Function);//falase 
+    console.log(JSON instanceof Object);
+</script>
+</html>	
+

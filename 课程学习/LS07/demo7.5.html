@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>cal与apply</title>
+</head>
+<body>
+</body>
+<script>
+    var objA={
+        "objName":"AAA",
+        "foo":function(){
+            console.log(this.objName);
+        }
+    }
+    var objB={
+        "objName":"BBB"
+    };
+    var foo2=objA.foo.bind(objB);
+    foo2()
+</script>
+</html>	
+

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>caller</title>
+</head>
+<body>
+</body>
+<script>
+    function fn1(){
+        console.log(fn1.caller);
+    }
+    function fn2(){
+        fn1();
+    }
+    fn2();//输出fn2这个函数
+    //callee常用于递归调用
+</script>
+</html>	
+

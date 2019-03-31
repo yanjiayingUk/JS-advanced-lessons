@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>arguments与length</title>
+</head>
+<body>
+</body>
+<script>
+    function fn1(x){
+        //arguments获取函数调用时传入的实参，类数组结构
+        for(var i=0;i<arguments.length;i++){
+            console.log(arguments[i]);
+        }
+        //函数名.length表示的是形参的个数
+        console.log(fn1.length);//1
+    }
+    fn1(2,3,10);
+</script>
+</html>	
+

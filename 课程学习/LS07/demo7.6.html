@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>bind</title>
+</head>
+<body>
+</body>
+<script>
+    var obj={
+        x:3
+    };
+    function fn1(){
+        function fn2(){
+            console.log(this.x)
+        }
+        return fn2;   
+    }
+    obj.fn3=fn1;//fn3结果就是fn1,fn1结果就是fn2
+    obj.fn4=fn1();
+    obj.fn3();
+    obj.fn4();
+
+    var obj={
+        x:1,
+        fn1:function(){
+            //var that=this;
+            function fn2(){
+                console.log(this.x);//undefined函数多层嵌套，this没办法穿透
+                console.log(that.x);//把他定义成变量却可以
+            }
+            console.log(this.x);
+            fn2();
+        }
+    }
+    obj1.fn1();
+</script>
+</html>	
+

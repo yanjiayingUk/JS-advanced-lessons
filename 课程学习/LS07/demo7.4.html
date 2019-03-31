@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>cal与apply</title>
+</head>
+<body>
+</body>
+<script>
+    var objA={"objName":"AAA"};
+    var objB={"objName":"BBB"};
+    objA.foo=function(){
+        console.log(this.objName);
+    }
+     objA.foo();
+     //方法.call(对象);
+     objA.foo.call(objB);
+
+     function Person(username){
+         this.username=username;
+         this.sayHi=function(){
+             console.log(this.username);
+         }
+     }
+     //Person.call(this.username)
+     //其具有一个指定的this值和分别的提供的参数（参数的列表）
+     function Student(username,age){
+         //Person.call(this,username);//可以看成切换了this的指向，换成了当前的对象
+         Person.apply(this,[username]);//与call效果一样，但表示不一样，均被执行一次
+         this.age=age;
+     }
+
+     var person=new Person("zhangsan");
+     var student=new Student("lili",20);
+     console.log(student);
+</script>
+</html>	
+

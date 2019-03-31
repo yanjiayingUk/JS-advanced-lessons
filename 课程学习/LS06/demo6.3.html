@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    //定义一个函数完成对变量的复制过程，生成新的变量并返回。
+    //引用类型时，数组、对象
+    var obj={"username":"zhangsan","age":20};
+    /*function two(o){
+        var a;
+        a.username=o.username;
+        a.age=o.age;
+        console.log(a);
+    }
+    two(obj);*///错误示例
+    function copyArg(arg1){
+        var copy;
+        switch(true){
+            case (arg1 instanceof String):
+                copy=arg1;
+                break;
+            case (arg1 instanceof Number):
+                copy=arg1;
+                break;
+            case (arg1 instanceof Boolean):
+                copy=arg1;
+                break;
+            case (arg1 instanceof Array):
+                copy=[];
+                for(var i=0;i<arg1.length;i++){
+                    copy[i]=arg1[i];
+                }
+                break;
+        }
+    }
+
+    var str="abc";
+    var strObject=new Object(str);
+    console.log(strObject instanceof Object);
+</script>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+

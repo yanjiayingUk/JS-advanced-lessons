@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>lalala</title>
+</head>
+<body>
+    <div id="div1" style="width:100px;henght:50px"></div>
+</body>
+<script>
+    /*(function 函数名(参数){
+        函数体
+    }(实参));*/
+
+    (function max(x,y){
+        return x>y?x:y;
+    }(2,3));
+
+    var userId=2;
+    document.onclick=function(){
+        alert(userId);
+    }
+    if(true){
+        var userId=3;
+    }
+
+
+    //ES5中需要考虑变量重名，形成一个新的作用域，把他包裹起来
+    /*var userId=2;
+    document.onclick=function(){
+        alert(userId);
+    }
+    (function(){
+        if(true){
+            var userId=3;
+        }
+    })()*/
+</script>
+</html>	
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .container{
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            border: 3px solid red;
+        }
+        .tabs>span{
+            float: left;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .contents{
+            clear: both;
+        }
+        .contents>div{
+            height: 250px;
+            line-height: 250px;
+            font-size: 50px;
+            text-align: center;
+            display: none;
+        }
+        .contents>.show{
+            display: block;
+        }
+        .active{
+            background-color: #cdcdcd;
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="container">
+    <div class="tabs">
+        <span class="active">导航0</span>
+        <span>导航1</span>
+        <span>导航2</span>
+        <span>导航3</span>
+    </div>
+    <div class="contents">
+        <div class="show">导航0内容</div>
+    </div>
+</div>
+
+<!--IIFE 解决变量共享问题的实例-->
+<script>
+//立即执行函数表达式
+//避免变量的污染，形成一个独立的空间，变量仅在作用域内起作用
+//为啥出不来嘞？
+    (function(w,d){
+        var spanlist=d.getElementsByTagName('span');
+        var show=d.getElementsByClassName('show')[0];
+        for(var i=0;i<spanlist.length;i++){
+            (function(){
+                spanlist[i].onclick=function(){
+                    show.innerText="导航"+i+"内容";
+                }
+            })(i)
+        }
+    })(window,document)//有一种从内层往外层查找的过程，对比下面函数，立即执行，剪短作用域面长度
+    /*(function(w,d){
+
+    })()*/
+
+</script>
+
+</body>
+</html>

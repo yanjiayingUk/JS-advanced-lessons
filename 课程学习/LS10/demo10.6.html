@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*闭包带来的影响
+      1.闭包让我们可以访问到函数内部定义的变量
+      2.闭包让关联作用域中的特定变量保持在内存中，不释放
+
+    */
+    function foo(){
+        var i=0;
+        function bar(){
+            console.log(++i);
+        }
+        return bar;
+    }
+    var fn1=foo();
+    var fn2=foo();//这个foo生成了两个闭包，每执行一次生成一个闭包，且闭包之间互不影响
+    fn1();//1
+    fn1();//2
+    fn2();//1
+    fn1();//3
+</script>
+</html>	
+
