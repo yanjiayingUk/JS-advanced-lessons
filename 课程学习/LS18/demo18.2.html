@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*var reg1=/adf/gi;
+    var str="abcdef adf kil";
+    str.match(reg1);*/
+
+    var str="abcdef adf kil ad";
+    var reg1=/adf/gi;
+    console.log(str.match(reg1));
+
+    var reg2=/adf*/gi;//检索ad后边有n个f(n>=0)
+    console.log(str.match(reg2));
+
+    var reg3=/a.c/gi;//.表示其中可以是任意的一个字符
+    console.log(str.match(reg3));
+
+    /*
+        字符类别：
+        \d表示的是任意阿拉伯数字[0-9]
+    */
+    var reg4=/a\dc/gi;
+    var str4="a2c a3c abc";
+    console.log(str4.match(reg4));
+</script>
+</html>	
+

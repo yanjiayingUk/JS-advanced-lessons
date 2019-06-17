@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+    <ul id="list">
+
+    </ul>
+</body>
+<script>
+    //JSON.stringify(js对象)
+    //可以将js对象数组、结构转化为json字符串
+    var jsObject={
+        "username":"zhangsan",
+        "age":20,
+        "address":{"add":"石家庄","addcode":"11322"}
+    }
+    var jsonStr=JSON.stringify(jsObject,function(k,v){
+        if(typeof v=="number"){
+            return v*2;
+        }
+        return v;
+    });
+    /*console.log(jsonStr);
+    console.log(typeof jsonStr);*/
+
+    //传输过程是字符串，传送完以后转化为有结构的对象或数组结构
+    var jsObject2=JSON.parse(jsonStr,function(k,v){//内层属性输出完了输出外部属性，先输出add再输出address
+        console.log(k,v);
+    });
+    /*console.log(jsObject2);
+    console.log(typeof jsObject2);*/
+</script>
+</html>	
+

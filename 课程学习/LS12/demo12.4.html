@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    var objProto={
+        z:3
+    }
+    var obj=Object.create(objProto);
+    obj.x=1;
+    obj.y=2;
+    console.log(obj.x,obj.y,obj.z);
+    console.log(obj.toString);
+    for(var k in obj){
+        console.log(k,obj[k]);//for...in 一般用于遍历对象，不用来遍历数组
+    }
+</script>
+</html>	
+

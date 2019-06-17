@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    var point={
+        x:0,
+        y:0,
+        moveTo:function(x,y){
+            function moveTox(x){
+                this.x=x;
+            }
+            function moveToy(y){
+                this.y=y;
+            }
+            /*
+                函数.blind(对象)切换函数的调用主体
+                生成一个新的函数，并且是不会立即执行的
+            */
+            moveTox.bind(this)();
+            moveToy.bind(this)();
+        }
+    }
+    point.moveTo(10,10);
+    console.log(point);
+
+
+    //只有构造函数才有prototype属性
+</script>
+</html>	
+

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    //分组可以看做当前正则表达式订单子规则，分组匹配得到的内容，可以再exec方法调用的返回结果中查看
+    //exec和test属于正则表达式
+    var reg1=/(ab\d)(\def)\d/gi;
+
+    var str="abc31ef12";
+    var result=reg1.exec(str);//方法在一个指定字符串中执行一个搜索匹配，返回一个结果数组或null
+    console.log(result);
+
+    //反向引用，通过\n来引用前面出现的分组
+    //n表示前面出现的第几个分组
+    var reg2=/(ss)a\1/gi;
+    //等效于var reg2=/(\d)a(\d)/gi;
+    //如果再次引用，就是\2
+    var str2="ssasss";
+    var result1=str2.replace(reg2,"x");
+    console.log(result1);
+
+</script>
+</html>	
+

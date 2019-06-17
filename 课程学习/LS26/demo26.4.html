@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>Uk</title>
+</head>
+<body>
+</body>
+<script>
+    var obj={
+        objName:"obj1",
+        showName:function(){
+            console.log(this);//this指向obj
+            var intervalId=setTimeout(()=>{
+                console.log(this);//this指向window
+                console.log(this.objName);
+            },3000);
+        }
+    }
+    obj.showName();
+
+
+    function fn1(x,y=2,z=3){
+        return x+y+z;
+    }
+    fn1(1);
+    fn1(1,3);
+    fn1(1,3,4);//参数缺少的话，使用默认值，一般将有默认值的参数写在后边
+    //如果有参数使用了默认值，则函数体内部不能出现和改参数名称一样的变量
+    //具有默认值的参数，必须写到没有默认值的参数后边
+
+
+    //添加了剩余 运算符的参数，会得到一个数组，接收剩余的实参，写在其它参数的后面
+    function fn2(x,...rest){
+        console.log(x);
+        console.log(rest);
+    }
+    fn2(1,2,3,4);
+
+    //spread扩展操作符
+    //rest的逆过程，将一个集合打散作为单个元素
+    function fn3(x){
+        console.log(x);
+        console.log(argumrnts);
+    }
+    fn3(1,...[2,3]);
+    fn3(4,5,6);
+</script>
+</html>	
+

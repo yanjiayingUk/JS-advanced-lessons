@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+        继承的实现方式
+    */
+    let obj1={"x":1};
+    let obj2=Object.create(obj1);
+    console.log(obj2.x);
+
+    let obj3={"y":2};
+    obj4.__proto__=obj3;
+
+    function fn1(){
+        this.x=1;
+    }
+    fn1.prototype.show=function(){
+        console.log(this.x);
+    }
+    let obj5=new fn1();
+</script>
+</html>	
+

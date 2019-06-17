@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    //对象instanceof构造函数
+    //1.判断对象能否使用该构造函数实例化得到
+    //2.判断对象的原型面上能否找到该构造函数的原型
+    //对象.__proto__.__proto__(不一定是两级，可能一级、三级...长度不确定)==构造函数.prototype
+    //var o = new Object();构造函数也是函数，真该死的完蛋
+    console.log(Object instanceof Function);//true
+    console.log(Function instanceof Object);//true
+    console.log(Object.__proto__==Function.prototype);//true
+    console.log(Object instanceof Object);//true
+    console.log(Object.__proto__==Object.prototype);//false
+    console.log(Object.__proto__.__proto__==Object.prototype);
+</script>
+</html>	
+

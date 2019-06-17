@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    function Person(username,age){
+        this.username=username;
+        this.age=age;
+        this.sayHi=function(){
+            console.log(this.username);
+        }
+    }
+    var person1=new Person("zhangsan",20);
+    var person1=new Person("lisi",22);
+
+    function Person(username,age){
+        this.username=username;
+        this.age=age;
+    }
+    Person.prototype.sayHi=function(){
+        console.log(this.username);
+    }
+
+    console.log(person1.__proto__==Person.prototype);
+    var person1=new Person("zhangsan",20);
+    var person2=new Person("lisi",22);
+    person1.sayHi();
+    person2.sayHi();
+</script>
+</html>	
+

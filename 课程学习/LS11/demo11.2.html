@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*function foo(x){
+        var tmp=3;
+        return function(y){
+            x.count=x.count?x.count+1:1;
+            console.log(x+y+tmp,x.count);
+        }
+    }
+    var age=new Number(2);
+    var bar =foo (age);
+    bar(10);
+    bar(10);
+    bar(10);*/
+
+
+    function counter(){
+        var n=0;
+        return{
+            count:function(){
+                return ++n;
+            },
+            reset:function(){
+                n=0;
+                return n;
+            }
+        }
+    }
+    var c=counter(),d=counter();
+    console.log(c.count());
+    console.log(d.count());
+    console.log(c.count());
+    console.log(c.count());
+    console.log(d.count());
+</script>
+</html>	
+

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+        promise将异步的代码写成同步的方式进行执行
+    */
+   setTimeout(function(){
+       console.log("时间到");
+   },3000);
+   console.log("同步代码1");
+   console.log("同步代码2");
+
+
+   /*
+        new Promise(function(resolve,reject){
+            异步操作
+            resolve();异步操作成功时的调用
+            reject();异步操作失败时的调用
+        }).then(function(){
+            其实解释resolve的函数的定义
+        },function(){
+            其实是reject函数的定义
+        })
+
+   */
+
+   //改变成promise结构
+   new Promise(function(resolve,reject){
+       setTimeout(function(){
+           console.log("时间到");
+           //resolve是异步操作成功时的回调函数，reject是异步操作失败时的回调函数
+           resolve("hello");//来源于上边的参数，一般if操作成功的时候调用这个方法
+       },3000);
+   }).then(function(val){
+       console.log("resolve被调用"+val);
+   },function(){
+
+   }).catch(function(){
+        //捕获异常
+   }).finally(function(){
+       console.log("不论如何都会执行");
+   })
+</script>
+</html>	
+

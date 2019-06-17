@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*try{
+        //监听的代码块
+        function abc(x,cb){
+            console.log(x);
+            cb();
+        }
+        abc("xx",function(){
+            var arr=new Array(-1);
+        })
+    }catch(error){
+        //捕获到异常后的处理
+        console.log(error);
+    }finally{
+        //无论是否捕获到异常都会执行
+    }*/
+
+
+    try{
+        //监听的代码块
+        function abc(x,cb){
+            console.log(x);
+            cb();
+        }
+    }catch(error){
+        //捕获到异常后的处理
+        console.log(error);
+    }
+    abc("xx",function(){
+        var arr=new Array(-1);
+    })
+</script>
+</html>	
+

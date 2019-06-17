@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+        1.判断方法是静态方法还是原型方法
+        2.确定这个方法是用来做什么的①是否会对原变量产生影响
+                                 ②最终的作用效果是什么样的
+        3.方法的参数分别是什么①如果参数是回调函数的形式，判断回调函数的参数是什么
+                            ②如果是值类型参数，判断参数所代表的意义
+        4.确定方法调用的返回值
+    */
+    var arr1=[1,2,3,4];
+    console.log(arr1.reverse());
+    function compareNumbers(a,b){
+        return a-b;
+    }
+    console.log(arr1.sort(compareNumbers));//都影响数组内部结构
+</script>
+</html>	
+

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    //对象都有.__proto__到头就变成null了
+    var obj={z:3};
+    console.log(obj.__proto__);//Object
+    console.log(obj.__proto__==Object.prototype);
+    console.log(obj.__proto__.__proto__);//null
+    console.log(Object.prototype.__proto__);//null
+    
+    var obj1={x:1};
+    var obj2=Object.create(obj1);
+
+    console.log(obj2.__proto__);
+    console.log(obj2.__proto__.__proto__);
+</script>
+</html>	
+

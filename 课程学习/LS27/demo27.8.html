@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    //通过super()可以调用父类的构造函数
+    //子类继承父类extends
+    //在类的构造函数里面super指向父类的构造函数
+    //继承的子类构造函数中super必须在后边父类的this赋值的前边
+
+    //super在子类的原型方法中指向父类的prototype
+    class Parent{
+        construstor(x,y){
+            this.x=x;
+            this,y=y;
+        }
+        parentshow(){
+            console.log("hello");
+        }
+    }
+    class Child extends Parent{
+        constructor(x,y,z){
+            super(x,y);
+            this.z=z;//必须在super之后
+        }
+        show(){
+            super.parentshow();
+            console.log("this");
+        }
+    }
+    let c1=new Child(1,2,3);
+    console.log(c1);
+
+</script>
+</html>	
+

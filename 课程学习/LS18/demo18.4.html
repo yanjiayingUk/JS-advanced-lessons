@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+        数量词：
+        ?表示之前的字符出现0次或者1次
+        +表示之前的字符出现1次或者多次
+    */
+    var reg1=/abc?/gi;
+    var str1="abc ab kkk";
+    console.log(str1.replace(reg1,"x"));
+
+    var reg2=/abc+/gi;
+    var str2="abc abcc abccccc ab abd";
+    console.log(str2.replace(reg2,"x"));
+
+    var reg3=/abc{1,3}/gi;
+    var str3="ab abc abcc abccc abcccc";
+    console.log(str3.replace(reg3,"x"));
+
+</script>
+</html>	
+

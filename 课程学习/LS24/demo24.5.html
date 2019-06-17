@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+    <button id="btn">jq ajax</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    /*var username="zhangsan";
+    if(true){
+        var username="lisi";
+    }
+    console.log(username);*/
+
+    //let声明的变量会拥有块级作用域
+    let username="zhangsan";
+    if(true){
+        let username="lisi";//let 可以形成块级作用域
+    }
+    console.log(username);
+</script>
+</html>	
+

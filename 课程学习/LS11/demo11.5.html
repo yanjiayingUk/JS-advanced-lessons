@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    var o={
+        _x:1,//不想被访问到的一般加下划线
+        get x(){//方法名x
+            return this._x;
+        },
+        set x(val){
+            this._x=val;
+        }
+    }
+    o.x=10;
+    console.log(o.x,o._x);
+</script>
+</html>	
+

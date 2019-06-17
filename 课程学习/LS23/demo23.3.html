@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+    <title>烬</title>
+    <style>
+        #div1{
+            width:200px;
+            height:200px;
+            background-color: aquamarine;
+            margin:0 auto;
+        }
+        #div2{
+            width:100px;
+            height:100px;
+            background-color: rgb(237, 238, 181);
+            margin:0 auto;
+        }
+        #div3{
+            width:50px;
+            height:50px;
+            background-color: rgb(205, 24, 241);
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+            <div id="div3"></div>
+        </div>
+    </div>
+</body>
+<script>
+    //事件的冒泡和捕获
+    //冒泡处理过程是从内往外依次触发事件
+    //捕获处理过程是从外往内依次触发事件
+    //e.target事件的根源DOM对象，最里面的元素
+    //e..currentTarget 当前触发事件的dom对象
+    var div1=document.getElementById("div1");
+    var div2=document.getElementById("div2");
+    var div3=document.getElementById("div3");
+    div1.addEventListener("click",function(e){
+        console.log(e.currentTarget);
+        console.log(e.target);
+        console.log("div1");
+    },false)//不设置参数默认false
+    div2.addEventListener("click",function(e){
+        console.log(e.currentTarget);
+        console.log(e.target);
+        console.log("div2");
+    },true)
+    div3.addEventListener("click",function(e){
+        e.stopPropagation();//阻止冒泡或捕获
+        console.log(e.bubbles);
+        console.log(e.currentTarget);
+        console.log(e.target);
+        console.log("div3");
+    },false)
+</script>
+</html>	
+

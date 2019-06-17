@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+    <input type="test" class="forminput" id="username"/>
+</body>
+<script>
+    (function(w,d){
+        function inputIdentify(){
+            this._init(inputId);
+            this._effect();
+        }
+        inputIdentify.prototype._init=function(){
+            var inputObject=d.getElementById(inputId);
+            this.inputObject=inputObject;
+        }
+        inputIdentify.prototype._effect=function(){
+            this.inputObject.onblur=function(){
+                alert("失去焦点");
+            }
+            this.inputObject.onfocus=function(){
+                alert("获得焦点");
+            }
+        }
+        //形成了一个闭包，应该添加到window对象上，作用在全局
+        w.inputIdentify=inputIdentify;
+    })(window,document)
+
+    var input1=new inputIdentify("username");
+</script>
+</html>	
+

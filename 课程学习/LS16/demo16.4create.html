@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    function Person(name,age){
+        this.name=name;
+        this.age=age;
+    };
+    Person.prototype.showName=function(){
+        console.log(this.name);
+    }
+    function Student(name,age,id){
+        Person.call(this,name,age);
+        this.id=id;
+    }
+    /*var p1=Object.create(Person.prototype);
+    Student.prototype=p1;
+    Student.prototype.constructor=Student;*/
+    //所有的构造函数都有个constructor指向，指向它自己
+
+
+    Student.prototype=Object.create(Person.prototype);
+    Student.prototype.constructor=Student;
+    var s1=new Student("xxx",22,2017001);
+    var s2=new Student("www",23,2017002);
+    console.log(s1);
+</script>
+</html>	
+

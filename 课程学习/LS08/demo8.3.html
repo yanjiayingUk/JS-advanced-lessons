@@ -37,6 +37,11 @@
             userId=30;
         }
     })()//函数立即执行，这样就不影响全局userId了
+    console.log(foo);
+    var foo=function(){
+        console.log("foo");
+    };
+    foo();
 </script>
 </html>	
 

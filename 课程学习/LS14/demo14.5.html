@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    //定义一个车(car)的对象，height,width,weight
+    //创建一个小轿车(smallCar)的对象，继承车相关的属性，自己具有color seatNum
+    //create方法，以及构造函数的形式
+    var car={
+        height:150,
+        width:200,
+        weight:600
+    }
+    var smallCar=Object.create(car);
+    smallCar.color="blue";
+    smallCar.seatNum=20;
+    console.log(smallCar);
+
+    //构造函数的形式
+    function createSmallCar(color,seatNum){
+        this.color=color,
+        this.seatNum=seatNum;
+    }
+    createSmallCar.prototype=car;
+    var smallCar=new createSmallCar("red",4);
+</script>
+</html>	

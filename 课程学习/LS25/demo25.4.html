@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    let str="abcdef";
+    for(let i of str){
+        console.log(i);
+    }
+    //重复执行次数
+    str.repeat(4);
+
+    let reg1=/xyz/gi;
+    let reg2=new RegExp("xyz",'gi');
+    let reg3=new RegExp(/xyz/gi);
+    let reg4=new RegExp(/xyz/gi,'i');
+
+    //正则表达式对象.flags获取到正则表达式修饰符
+    console.log(reg1.flags);
+
+
+    //sticky y修饰符 它会从上一次匹配成功的结束位置开始匹配
+    let str1="aaa_aa_a";
+    let reg5=/a+/g;
+    let reg6=/a+/y;
+    console.log(reg5.exec(str1));//可以返回匹配的结果
+    console.log(reg5.exec(str1));
+    console.log(reg6.exec(str1));
+    //上一次结束的索引位置
+    reg6.lastIndex;
+    console.log(reg6.exec(str1));
+    console.log(reg6.sticky);
+</script>
+</html>	
+

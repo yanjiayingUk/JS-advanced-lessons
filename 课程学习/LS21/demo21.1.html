@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body id="mybody">
+        <table id="tb1" width="400px" height="100px" align="center" border="1px">
+                <tr class="even">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="odd">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="even">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="odd">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+        </table>
+        <table width="400px" height="100px" align="center" border="1px">
+                <tr class="even">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="odd">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="even">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="odd">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+        </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    /*
+        $("")jequery包装集
+
+        选择器：id选择器、类选择器、标签选择器、层级选择器
+
+        （后代选择器、子选择器）都属于层级选择器范畴
+    */
+    $("#tb1 .even").css("background","pink");
+    $("#tb1 .odd").css("background","purple");
+    $("#tb1 td").css("background","pink");
+    $("td:first").css("background","green");
+    $("td:last").css("background","red");
+    /*
+        eq(index)选定特定索引值的元素
+        gt(index)选中索引值大于index的元素
+        lt(index)选中索引值小于index的元素
+        not(selector)从特定集合中排除一些元素
+    */
+    $("td:eq(0)").css("background","black");//0是黑色
+    $("td:gt(1)").css("background","white");//大于1的都是白色
+    $("td:lt(3)").css("background","yellow");//前三个都是黄色
+    $("td:not(#td1)").css("background","blue");
+
+</script>
+</html>	
+

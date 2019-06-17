@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+        使用static方法(){}来添加静态方法
+        静态方法通过类进行调用
+        静态方法内部的this指向类本身
+    */
+    class Point{
+        constructor(){
+            this.x=1;
+            this.y=2;
+        }
+        static showPoint(){
+            console.log(this);
+        }
+
+    }
+    Point.showPoint();
+</script>
+</html>	
+

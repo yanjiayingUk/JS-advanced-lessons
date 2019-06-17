@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<link rel="icon">
+	<title>烬</title>
+</head>
+<body>
+</body>
+<script>
+    /*
+        /正则表达式/正则表达式的标识符
+        [xzy]指的是匹配中括号中任意的字符
+        标识符：g全局的检索
+               i表示忽略大小写
+    */
+    var reg1=/[bcf]at/ig;
+    var str="fat cat bat Fat ojiidd Ippqpw";
+    var arr=str.match(reg1);//match()方法检索返回一个字符串匹配正则表达式的的结果。
+    console.log(arr);//显示匹配成功相关项
+</script>
+</html>	
+
